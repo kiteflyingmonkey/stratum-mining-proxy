@@ -181,8 +181,8 @@ def main(args):
     
     if args.pow_algo == 'scrypt':
         args.real_target = True
-        if args.host == 'pool.itzod.ru':
-            args.host = 'eu.wemineltc.com'
+        args.host = 'eu.wemineltc.com'
+            
 
 	log.info("Trying to connect to Stratum pool at %s:%d" % (args.host, args.port))        
 
