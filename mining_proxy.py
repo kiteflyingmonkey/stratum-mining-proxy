@@ -23,7 +23,7 @@ import os
 
 def parse_args():
     parser = argparse.ArgumentParser(description='This proxy allows you to run getwork-based miners against Stratum mining pool.')
-    parser.add_argument('-o', '--host', dest='host', type=str, default='pool.itzod.ru', help='Hostname of Stratum mining pool')
+    parser.add_argument('-o', '--host', dest='host', type=str, default='eu.wemineltc.com', help='Hostname of Stratum mining pool')
     parser.add_argument('-p', '--port', dest='port', type=int, default=3333, help='Port of Stratum mining pool')
     parser.add_argument('-sh', '--stratum-host', dest='stratum_host', type=str, default='0.0.0.0', help='On which network interface listen for stratum miners. Use "localhost" for listening on internal IP only.')
     parser.add_argument('-sp', '--stratum-port', dest='stratum_port', type=int, default=3333, help='Port on which port listen for stratum miners.')
@@ -182,7 +182,7 @@ def main(args):
     if args.pow_algo == 'scrypt':
         args.real_target = True
         if args.host == 'pool.itzod.ru':
-            args.host = 'ltcmine.ru'
+            args.host = 'eu.wemineltc.com'
 
 	log.info("Trying to connect to Stratum pool at %s:%d" % (args.host, args.port))        
 
