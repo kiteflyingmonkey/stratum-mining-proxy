@@ -179,12 +179,11 @@ def main(args):
     else:
         proxy = None
     
-    if args.pow_algo == 'scrypt':
-        args.real_target = True
-        args.host = 'eu.wemineltc.com'
+    #if args.pow_algo == 'scrypt':
+    #    args.real_target = True
+      #  args.host = 'eu.wemineltc.com'
             
-
-	log.info("Trying to connect to Stratum pool at %s:%d" % (args.host, args.port))        
+    log.info("Trying to connect to Stratum pool at %s:%d" % (args.host, args.port))        
 
     # Connect to Stratum pool
     f = SocketTransportClientFactory(args.host, args.port,
