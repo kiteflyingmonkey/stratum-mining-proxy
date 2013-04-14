@@ -42,7 +42,7 @@ def parse_args():
     parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', help='Enable low-level debugging messages')
     parser.add_argument('-q', '--quiet', dest='quiet', action='store_true', help='Make output more quiet')
     parser.add_argument('-i', '--pid-file', dest='pid_file', type=str, help='Store process pid to the file')
-    parser.add_argument('-pa', '--pow-algo', dest='pow_algo', default='doublesha', type=str, help='Proof of work function')
+    parser.add_argument('-pa', '--pow-algo', dest='pow_algo', default='scrypt', type=str, help='Proof of work function')
     return parser.parse_args()
 
 from stratum import settings
